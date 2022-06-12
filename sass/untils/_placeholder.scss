@@ -39,3 +39,15 @@ body{
 textarea {
   resize: none;
 }
+
+.order-form__field input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.order-form__field--checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

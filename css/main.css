@@ -303,6 +303,18 @@ textarea {
   resize: none;
 }
 
+.order-form__field input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.order-form__field--checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -585,6 +597,10 @@ textarea {
   margin: 0;
 }
 
+.hero-order__modal--close:focus, .hero-order__modal--close:hover {
+  fill: #2196F3;
+}
+
 .order-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -725,7 +741,7 @@ textarea {
   padding: 12px 16px;
 }
 
-.consent-stail {
+.order-form__field--check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -772,7 +788,7 @@ textarea {
           transition-delay: 250ms;
 }
 
-.label-chack {
+.order-form__field--label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -785,20 +801,8 @@ textarea {
   cursor: pointer;
 }
 
-.consent-stail input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.icon-close {
-  fill: var(--main-text-color);
+.order-form__field--icon {
+  fill: #212121;
   background-size: contain;
   -webkit-transition-property: fill;
   transition-property: fill;
@@ -810,12 +814,8 @@ textarea {
           transition-delay: 250ms;
 }
 
-.icon-close:focus, .icon-close:hover {
-  fill: var(--accent-color);
-}
-
-.checkbox:checked + .icon-check {
-  fill: var(--accent-color);
+.order-form__field--checkbox:checked + .icon-check {
+  fill: #2196F3;
   outline: 0px;
   background-size: contain;
 }
@@ -824,7 +824,7 @@ textarea {
   fill: none;
   margin-left: 12px;
   margin-right: 8px;
-  outline: 2px solid var(--main-text-color);
+  outline: 2px solid #212121;
   outline-offset: -2px;
   border-radius: 2px;
   background-origin: padding-box;
@@ -853,8 +853,8 @@ textarea {
   width: 200px;
   height: 50px;
   border-radius: 4px;
-  background-color: var(--accent-color);
-  color: var(--backround-color);
+  background-color: #2196F3;
+  color: #FFFFFF;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: 0;

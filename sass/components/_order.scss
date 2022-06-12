@@ -78,8 +78,10 @@
     background-size: contain;
     padding: 0;
     margin: 0;
+    &:focus, &:hover {
+        fill: $accent-color;
+    }
 }
-
 
 .order-form {
     @include centeredFlex;
@@ -188,7 +190,7 @@
 }
 
 
-.consent-stail {
+.order-form__field--check {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -205,18 +207,17 @@
 }
 
 .input-taxt {
-    color: var(--main-text-color);
+    color: $ain-text-color;
 }
 
 
 .check-agreement {
-    color: var(--accent-color);
+    color: $ccent-color;
     text-decoration: underline;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-
 
 .icon-order-box{
     position: absolute;
@@ -231,28 +232,15 @@
     transition-delay: 250ms;
 }
 
-.label-chack {
+.order-form__field--label {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-.consent-stail input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-
-.icon-close {
-    fill: var(--main-text-color);
+.order-form__field--icon {
+    fill: $main-text-color;
     background-size: contain;
 
     transition-property:  fill;
@@ -261,23 +249,20 @@
     transition-delay: 250ms;
 }
 
-.icon-close:focus, .icon-close:hover {
-    fill: var(--accent-color);
-}
-
-.checkbox:checked + .icon-check {
-    fill: var(--accent-color);
+.order-form__field--checkbox {
+    &:checked + .icon-check {
+    fill: $accent-color;
     outline: 0px;
     background-size: contain;
-    
+    }
     
 }
 
-.icon-check{
+.order-form__field--icon{
     fill: none;
     margin-left: 12px;
     margin-right: 8px;
-    outline: 2px solid var(--main-text-color);
+    outline: 2px solid $main-text-color;
     outline-offset: -2px;
     border-radius: 2px;
     background-origin: padding-box;
@@ -286,10 +271,7 @@
     transition-property:  fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 250ms;
-   
-   
-  
+    transition-delay: 250ms
 }
 
 .button-submit-main {
@@ -302,8 +284,8 @@
     width: 200px;
     height: 50px;
     border-radius: 4px;
-    background-color: var(--accent-color);
-    color: var(--backround-color);
+    background-color: $accent-color;
+    color: $backround-color;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     border: 0;
     cursor: pointer;
