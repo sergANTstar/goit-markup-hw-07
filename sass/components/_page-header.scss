@@ -80,7 +80,7 @@
 
 .header-block__contacts--item{
     @include centeredFlex (inline-flex);
-    :not(:last-child) {
+    :not(:first-child) {
         margin-right: 30px;
     }
 }

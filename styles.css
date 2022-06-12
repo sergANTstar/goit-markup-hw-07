@@ -11,71 +11,7 @@
     color: var(--backround-color);
 }
 
-.margin-contacts-nav {
-    margin-left: 10px;
-}
 
-.icon-nav{
-    fill: currentColor;
-}
-
-.contacts-nav-link:hover, .contacts-nav-link:focus {
-    color: var(--accent-color);
-}
-
-.main-headline{
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right ,rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0)), url("../images/main.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
-.headline {
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
-
-.main-headline-text{
-    color: var(--backround-color);
-
-    font-weight: 900;
-    font-size:44px;
-    line-height: 1.36;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.bautton-block {
-    display: flex;
-    justify-content:center;
-    margin-top: 30px;
-    min-width: 200px;
-    height: 50px;
-}
-
-.order-button {
-    padding: 10px 32px;
-    border: none;
-    border-radius: 4px;
-    min-block-size: 200;
-    height: 50;
-            
-    color: var(--backround-color);
-    background-color: var(--accent-color);
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size:16px;
-    line-height: 1.89;
-    letter-spacing: 0.03em;
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 0.06em;
- }
 
 .backdrop {
     position: fixed;

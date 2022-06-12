@@ -421,7 +421,7 @@ body {
           justify-content: start;
 }
 
-.header-block__contacts--item :not(:last-child) {
+.header-block__contacts--item :not(:first-child) {
   margin-right: 30px;
 }
 
