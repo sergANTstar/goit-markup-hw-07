@@ -1,25 +1,7 @@
 @import "./untils/vars";
 @import "./untils/normalize";
 @import "./untils/placeholder";
-@import "./components/page-header";
 @import "./untils/mixin";
-
-
-body{
-    padding-top: 80px;
-    background-color: var(--backround-color);
-    color: var(--main-text-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size:14px ;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-}
-
-.container{
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+@import "./components/page-header";
+@import "./components/hero";
+@import "./components/order";
