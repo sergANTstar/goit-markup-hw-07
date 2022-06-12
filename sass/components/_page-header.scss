@@ -4,10 +4,12 @@
 .header{
     position: fixed;
     width: 100%;
+    height: 80px;
     top: 0;
     left: 0;
     outline: 1px solid #ECECEC;
     background-color: $backround-color;
+    
     z-index: 1;
 }
 
@@ -59,11 +61,11 @@
 }
 
 .site-nav__link--main {
-    margin-top: 35px;
+    margin-top: 32px;
     &::after {
         content: '';
           
-        margin-top: 32px;
+        margin-top: 28px;
     
         display: block;
         width: 100%;
@@ -86,8 +88,6 @@
     }
     
 }
-    
-
 
 .header-block__contacts--link {
     @include centeredFlex (inline-flex);
