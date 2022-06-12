@@ -78,6 +78,7 @@
     background-size: contain;
     padding: 0;
     margin: 0;
+    fill: none;
 
     transition-property: fill;
     transition-duration: 250ms;
@@ -86,7 +87,7 @@
 
 
     &:focus, &:hover {
-        fill: $accent-color;
+        fill: tomato;
     }
 }
 
@@ -265,16 +266,6 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 250ms
-}
-
-.order-form__field--icon {
-    fill: $main-text-color;
-    background-size: contain;
-
-    transition-property:  fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 250ms;
 }
 
 .button-submit-main {
