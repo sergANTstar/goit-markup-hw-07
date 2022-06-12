@@ -419,10 +419,18 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
-.header-block__contacts--item :not(:first-child) {
-  margin-right: 30px;
+.header-block__contacts--item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .header-block__contacts--link {
@@ -438,21 +446,14 @@ body {
   color: #757575;
   font-weight: 500;
   letter-spacing: 0.02em;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-delay: 250ms;
-          transition-delay: 250ms;
 }
 
 .header-block__contacts--link:hover, .header-block__contacts--link:focus {
   color: #2196F3;
+  fill: #2196F3;
 }
 
-.header-block__contacts__icon {
+.header-block__contacts--icon {
   fill: currentColor;
   margin-right: 10px;
 }
