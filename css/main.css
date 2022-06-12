@@ -468,8 +468,8 @@ textarea {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0))), url(./main.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0)), url(./main.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -493,6 +493,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -561,14 +564,14 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -582,17 +585,20 @@ textarea {
   margin: 0;
 }
 
-.oreder-form {
+.order-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -603,14 +609,14 @@ textarea {
 }
 
 .order-form__headline {
-  color: var(--main-text-color);
+  color: #212121;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.03em;
   text-align: center;
 }
 
-.form-field {
+.order-form__field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,42 +624,35 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 10px;
-  color: var(--second-text-color);
+  color: #757575;
 }
 
-.form-field:first-child {
+.order-form__field:first-child {
   margin-top: 0px;
 }
 
-.form-field:last-child {
+.order-form__field:last-child {
   margin-top: 20px;
 }
 
-.form-field label {
+.order-form__field label {
   margin-bottom: 4px;
 }
 
-.form-field:last-child label {
+.order-form__field:last-child label {
   margin-bottom: 0px;
 }
 
-.js-speaker-form {
-  margin-top: 12px;
-  margin-bottom: 30px;
-}
-
-.form-field:not(:last-child) input {
+.order-form__field:not(:last-child) input {
+  width: 448px;
   padding-left: 42px;
   outline: 1px solid rgba(33, 33, 33, 0.2);
   border: none;
   border-radius: 4px;
   height: 40px;
   font-size: 14px;
-  color: var(--main-text-color);
+  color: #212121;
   cursor: pointer;
   position: relative;
   -webkit-transition-property: outline;
@@ -666,19 +665,20 @@ textarea {
           transition-delay: 250ms;
 }
 
-.form-field:hover:not(:last-child) input,
-.form-field:hover textarea,
-.form-field:focus:not(:last-child) input,
-.form-field:focus textarea {
-  outline: 1px solid var(--accent-color);
+.order-form__field:hover:not(:last-child) input,
+.order-form__field:hover textarea,
+.order-form__field:focus:not(:last-child) input,
+.order-form__field:focus textarea {
+  outline: 1px solid #2196F3;
 }
 
-.form-field:hover input ~ a,
-.form-field:focus input ~ a {
-  fill: var(--accent-color);
+.order-form__field:hover input ~ a,
+.order-form__field:focus input ~ a {
+  fill: #2196F3;
 }
 
-.form-field textarea {
+.order-form__field textarea {
+  width: 448px;
   outline: 1px solid rgba(33, 33, 33, 0.2);
   border: none;
   border-radius: 4px;
@@ -696,24 +696,29 @@ textarea {
           transition-delay: 250ms;
 }
 
-.form-field textarea::-webkit-input-placeholder {
+.order-form__field textarea::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
 }
 
-.form-field textarea:-ms-input-placeholder {
+.order-form__field textarea:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
 }
 
-.form-field textarea::-ms-input-placeholder {
+.order-form__field textarea::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
 }
 
-.form-field textarea::placeholder {
+.order-form__field textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
+}
+
+.js-speaker-form {
+  margin-top: 12px;
+  margin-bottom: 30px;
 }
 
 .comments {
