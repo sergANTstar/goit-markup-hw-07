@@ -595,6 +595,15 @@ textarea {
   background-size: contain;
   padding: 0;
   margin: 0;
+  fill: #212121;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
 .hero-order__modal--close:focus, .hero-order__modal--close:hover {
@@ -688,8 +697,8 @@ textarea {
   outline: 1px solid #2196F3;
 }
 
-.order-form__field:hover input ~ a,
-.order-form__field:focus input ~ a {
+.order-form__field:hover input ~ .order-form__field--icon,
+.order-form__field:focus input ~ .order-form__field--icon {
   fill: #2196F3;
 }
 
@@ -698,7 +707,7 @@ textarea {
   outline: 1px solid rgba(33, 33, 33, 0.2);
   border: none;
   border-radius: 4px;
-  color: var(--main-text-color);
+  color: #212121;
   height: 120px;
   cursor: pointer;
   font-size: 14px;
@@ -714,44 +723,34 @@ textarea {
 
 .order-form__field textarea::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .order-form__field textarea:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .order-form__field textarea::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .order-form__field textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.js-speaker-form {
+.order-form__js {
   margin-top: 12px;
   margin-bottom: 30px;
 }
 
-.comments {
+.order-form__field--comments {
   padding: 12px 16px;
 }
 
-.order-form__field--check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.agreement {
+.order-form__field--agreement {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -759,25 +758,26 @@ textarea {
   margin-right: 9px;
 }
 
-.input-taxt {
-  color: var(--main-text-color);
+.order-form__field--input {
+  color: #212121;
+  position: relative;
 }
 
-.check-agreement {
-  color: var(--accent-color);
+.order-form__field--treaty {
+  color: #2196F3;
   text-decoration: underline;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.icon-order-box {
+.order-form__field--icon {
   position: absolute;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(calc(20px + 50%));
+          transform: translateY(calc(20px + 50%));
   margin-left: 12px;
   cursor: pointer;
-  fill: var(--main-text-color);
+  fill: #212121;
   -webkit-transition-property: fill;
   transition-property: fill;
   -webkit-transition-duration: 250ms;
@@ -789,9 +789,9 @@ textarea {
 }
 
 .order-form__field--label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -801,26 +801,26 @@ textarea {
   cursor: pointer;
 }
 
-.order-form__field--icon {
-  fill: #212121;
-  background-size: contain;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-delay: 250ms;
-          transition-delay: 250ms;
+.order-form__field--checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  cursor: pointer;
 }
 
-.order-form__field--checkbox:checked + .icon-check {
+.order-form__field--check:checked + .order-form__field--check-icon {
   fill: #2196F3;
   outline: 0px;
   background-size: contain;
 }
 
-.icon-check {
+.order-form__field--check-icon {
   fill: none;
   margin-left: 12px;
   margin-right: 8px;
@@ -839,17 +839,20 @@ textarea {
           transition-delay: 250ms;
 }
 
-.button-submit-main {
+.order-form__submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
 }
 
-.button-submit {
+.order-form__submit--button {
   width: 200px;
   height: 50px;
   border-radius: 4px;
@@ -865,5 +868,102 @@ textarea {
   line-height: 1.88;
   letter-spacing: 0.06em;
   text-align: center;
+}
+
+.advantages {
+  padding-top: 94px;
+}
+
+.advantages-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.advantages__item {
+  width: 270px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.advantages__headline {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.advantages__title {
+  margin-top: 10px;
+  color: #757575;
+  line-height: 1.71;
+}
+
+.we-doing {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.we-doing__headline {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.we-doing__block {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.we-doing__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.we-doing__hiden {
+  position: relative;
+  height: 294px;
+  overflow: hidden;
+}
+
+.we-doing__hiden--text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFFFFF;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

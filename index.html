@@ -62,49 +62,43 @@
                     <div class="hero-order__backdrop hero-order__hidden" data-modal>
                         <div class="hero-order__modal">
                             <a href="./index.html" class="hero-order__modal--close">
-                                <svg class="icon-close" width="18" height="18">
+                                <svg  width="18" height="18">
                                     <use href="./images/sprite.svg#icon-close"></use>
                                 </svg>
                             </a>
                             <div class="order-form">
                                 <p class="order-form__headline">Залиште свої дані і ми вам зателефонуємо</p>
-                                <form class="js-speaker-form">
+                                <form class="order-form__js">
                                     <div class="order-form__field">
                                         <label for="name">Ім'я</label>
                                         <input type="text" name="name" id="name"/>
-                                        <a class="order-form__field--icon-box">
-                                            <svg class="order-form__field--icon" width="18" height="18">
-                                                <use href="./images/sprite.svg#icon-name"></use>
-                                            </svg>
-                                        </a>
+                                        <svg class="order-form__field--icon" width="18" height="18">
+                                            <use href="./images/sprite.svg#icon-name"></use>
+                                        </svg>
                                     </div>
                                     <div class="order-form__field">
                                         <label for="tel">Телефон</label>
                                         <input class="order-form__field--input" type="tel" name="tel" id="tel" autofocus />
-                                        <a class="order-form__field--icon-box">
-                                            <svg class="order-form__field--icon" width="18" height="18">
-                                                <use href="./images/sprite.svg#icon-tel"></use>
-                                            </svg>
-                                        </a>
+                                        <svg class="order-form__field--icon" width="18" height="18">
+                                            <use href="./images/sprite.svg#icon-tel"></use>
+                                        </svg>
                                     </div>
                                     <div class="order-form__field">
                                         <label for="mail">Пошта</label>
                                         <input type="email" name="mail" id="mail" />
-                                        <a class="order-form__field--icon-box">
-                                            <svg class="order-form__field--icon" width="18" height="18">
-                                                <use href="./images/sprite.svg#icon-mailorder"></use>
-                                            </svg>
-                                        </a>
+                                        <svg class="order-form__field--icon" width="18" height="18">
+                                            <use href="./images/sprite.svg#icon-mailorder"></use>
+                                        </svg>
                                     </div>
                                     <div class="order-form__field">
                                         <label for="comments">Коментарі</label>
                                         <textarea class="order-form__field--comments"  name="comments" id="comments" placeholder="Введіть повідомлення"></textarea>
                                     </div>
                                     <div class="order-form__field">
-                                        <div class="order-form__field--check">
+                                        <div class="order-form__field--checkbox">
                                             <label class="order-form__field--label">
-                                                <input class="order-form__field--checkbox" type="checkbox" name="checkbox"/>
-                                                <svg class="order-form__field--icon" width="16" height="16">
+                                                <input class="order-form__field--check" type="checkbox" name="checkbox"/>
+                                                <svg class="order-form__field--check-icon" width="16" height="16">
                                                     <use href="./images/sprite.svg#icon-check"></use>
                                                 </svg>
                                                 <a class="order-form__field--agreement" >
@@ -115,8 +109,8 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="button-submit-main">
-                                     <button type="submit" class="button-submit" data-modal-close>Відправити</button>
+                                <div class="order-form__submit">
+                                     <button type="submit" class="order-form__submit--button" data-modal-close>Відправити</button>
                                 </div>
                             </div>
                         </div>
@@ -124,80 +118,80 @@
                 </div>
           </div>
         </section>
-        <section class="advantages-main">
+        <section class="advantages">
             <div class="container">
-                <ul class="our-advantages list">
-                    <li class="our-advantages-item">
-                        <a class="icon-box">
-                            <svg class="icon-advantages" width="70" height="70">
+                <ul class="advantages-block list">
+                    <li class="advantages__item">
+                        <a class="advantages__icon">
+                            <svg  width="70" height="70">
                                 <use href="./images/sprite.svg#icon-antenna"></use>
                             </svg>
                         </a>
-                        <h3 class="benefits-headline">Увага до деталей</h3>
-                        <p class="benefits-title">
+                        <h3 class="advantages__headline">Увага до деталей</h3>
+                        <p class="advantages__title">
                             Ідейні міркування, а також початок повсякденної роботи з формування позиції.
                         </p>
                     </li>
-                    <li class="our-advantages-item">
-                        <a class="icon-box">
-                            <svg class="icon-advantages" width="70" height="70">
+                    <li class="advantages__item">
+                        <a class="advantages__icon">
+                            <svg width="70" height="70">
                                 <use href="./images/sprite.svg#icon-clock"></use>
                             </svg>
                         </a>
-                        <h3 class="benefits-headline">Пунктуальність</h3>
-                        <p class="benefits-title">
+                        <h3 class="advantages__headline">Пунктуальність</h3>
+                        <p class="advantages__title">
                             Завдання організації, особливо рамки і місце навчання кадрів тягне за собою.
                         </p>
                     </li>
-                    <li class="our-advantages-item">
-                        <a class="icon-box">
-                            <svg class="icon-advantages" width="70" height="70">
+                    <li class="advantages__item">
+                        <a class="advantages__icon">
+                            <svg  width="70" height="70">
                                 <use href="./images/sprite.svg#icon-laptop"></use>
                             </svg>
                         </a>
-                        <p class="benefits-headline">Планування</p>
-                        <p class="benefits-title">
+                        <h3 class="advantages__headline">Планування</h3>
+                        <p class="advantages__title">
                             Так само консультація з широким активом значно обумовлює.
                         </p>
                     </li>
-                    <li class="our-advantages-item">
-                        <a class="icon-box">
-                            <svg class="icon-advantages" width="70" height="70">
+                    <li class="advantages__item">
+                        <a class="advantages__icon">
+                            <svg width="70" height="70">
                                 <use xlink:href="./images/sprite.svg#icon-astronaut"></use>
                             </svg>
                         </a>
-                        <h3 class="benefits-headline">Сучасні технології</h3>
-                        <p class="benefits-title">
+                        <h3 class="advantages__headline">Сучасні технології</h3>
+                        <p class="advantages__title">
                             Значимість цих проблем є настільки очевидною, що реалізація планових завдань.
                         </p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="we-doing-section">
+        <section class="we-doing">
             <div class="container">
-                <h2 class="second-headline">Чим ми займаємося</h2>
-                <ul class="we-doing list">
-                    <li class="we-doing-item">
-                        <div class="text-hiden-wedo">
+                <h2 class="we-doing__headline">Чим ми займаємося</h2>
+                <ul class="we-doing__block list">
+                    <li class="we-doing__item">
+                        <div class="we-doing__hiden">
                             <img src="./images/example1.jpg" width="370" alt="Приклад1" class="img">
-                            <p class="text-hiden-we">
+                            <p class="we-doing__hiden--text">
                                 Десктопні додатки
                             </p>
                         </div>
                     </li>
-                    <li class="we-doing-item">
-                        <div class="text-hiden-wedo">
+                    <li class="we-doing__item">
+                        <div class="we-doing__hiden">
                              <img src="./images/example2.jpg" width="370" alt="Приклад2" class="img">
-                             <p class="text-hiden-we">
+                             <p class="we-doing__hiden--text">
                                  Мобільні додатки
                              </p>
                     </div>
                     </li>
-                    <li class="we-doing-item">
-                        <div class="text-hiden-wedo">
+                    <li class="we-doing__item">
+                        <div class="we-doing__hiden">
                              <img src="./images/example3.jpg" width="370" alt="Приклад3" class="img">
-                             <p class="text-hiden-we">
+                             <p class="we-doing__hiden--text">
                                 Дизайнерські рішення
                              </p>
                         </div>
@@ -480,7 +474,7 @@
        <script>
            (() =>{
            document
-            .querySelector('.js-speaker-form')
+            .querySelector('.order-form__js')
             .addEventListener('submit', e => {
                 e.preventDefault();
 
